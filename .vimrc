@@ -42,7 +42,7 @@ set viminfo='50,"1000,:50,n~/.viminfo
 set whichwrap=b,s,h,l,<,>,[,]
 
 " set the characters shown for special cases (must be turned on with set list)
-se listchars=extends:»,eol:¶,trail:·,tab:»­
+se listchars=extends:Â»,eol:Â¶,trail:Â·,tab:Â»Â­
 
 " allow backspace to delete newlines and beyond the start of the insertion point
 set backspace=2
