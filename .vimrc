@@ -1,12 +1,13 @@
-
 set tags=ctags,../ctags,../../ctags,../../../ctags,../../../../ctags,../../../../../ctags,../../../../../../ctags,../../../../../../../ctags,../../../../../../../../ctags,../../../../../../../../../ctags,../../../../../../../../../../ctags,../../../../../../../../../../../ctags,../../../../../../../../../../../../ctags,../../../../../../../../../../../../../ctags,../../../../../../../../../../../../../../ctags,../../../../../../../../../../../../../../../ctags,../../../../../../../../../../../../../../../../ctags,../../../../../../../../../../../../../../../../../ctags,../../../../../../../../../../../../../../../../../../ctags
+
+set nu
 
 " ####### Taken from various places
 " Set to no vi compatibility mode
 set nocompatible
 
 " turn on verbosity 
-" set verbose=10
+"set verbose=10
 
 " define the top hel file
 set helpfile=$VIM/doc/help.txt
@@ -71,23 +72,20 @@ set textauto
 " check one line for commands in each file
 set modelines=1
 
-" insert sw spaces when using tab in front of a line
-set smarttab
-
-" To insert space characters whenever the tab key is pressed, set the 'expandtab' option:
-set expandtab
-" With this option set, if you want to enter a real tab character use Ctrl-V<Tab> key sequence.
-
-"To control the number of space characters that will be inserted when the tab key is pressed, set the 'tabstop' option. For example, to insert 4 spaces for a tab, use:
-:set tabstop=4
-
 " smart inden
 set smartindent
 
 " tabbing
+"To control the number of space characters that will be inserted when the tab key is pressed, set the 'tabstop' option. For example, to insert 4 spaces for a tab, use:
 set tabstop=4
+
 set shiftwidth=4
+
+" To insert space characters whenever the tab key is pressed, set the 'expandtab' option:
 set expandtab
+
+" insert sw spaces when using tab in front of a line
+set smarttab
 
 " set incremental search
 set incsearch
@@ -108,7 +106,7 @@ set suffixes=.bak,~,.o,.h,.info,.swp,.class
 set wildignore=*.bak,~,*.o,*.info,*.swp,*.class
 
 " get syntax highlighting
-let mysyntaxfile = "$VIM/mysyntax/mysyntax.vim"
+let mysyntaxfile = "$VIM/vim74/mysyntax/mysyntax.vim"
 syntax on
 if version >= 600
   filetype plugin on
@@ -116,16 +114,16 @@ if version >= 600
 endif
 
 " get special definitions for different file types
-source $VIM/set/set.vim
+" source $VIM/vim74/set/set.vim
 
 " get directory browser
-source $VIM/mymacros/dir.vim
+"source $VIM/mymacros/dir.vim
 
 " get directory browser
-source $VIM/mymacros/matchit.vim
+"source $VIM/mymacros/matchit.vim
 
 " get search highlighter
-source $VIM/set/hisearch.vim
+" source $VIM/vim74/set/hisearch.vim
 
 " define some additional filetypes
 " Bitbake
@@ -181,14 +179,14 @@ map <F9>      :source $VIM/set/text_dead.vim<CR>
 "
 " F6         - spell file & hilite spelling mistakesk
 " <ALT>F6    - return to normal syntax coloring
-source $VIM/mymacros/vimspell.vim
+" source $VIM/mymacros/vimspell.vim
 
 " source the file macros
-" so $VIM/macros/file_select.vim
+" source $VIM/vim74/macros/file_select.vim
 
 " set runtime path
 if version >= 600
-  set runtimepath=~/.vim,~/lib/vim/vimfiles,~/lib/vim,~
+  set runtimepath=~/.vim,~/lib/vim/vimfiles,~/lib/vim,~,/usr/share/vim/vim74
 endif
 
 " Map F1 to the ESC key in insert mode (useful if ESC and F11 are pretty close together)
